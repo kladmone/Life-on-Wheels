@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Life-on-Wheels/static/css/main.7acaea2f.css",
+    "main.js": "/Life-on-Wheels/static/js/main.c7acf7b6.js",
+    "index.html": "/Life-on-Wheels/index.html",
+    "main.7acaea2f.css.map": "/Life-on-Wheels/static/css/main.7acaea2f.css.map",
+    "main.c7acf7b6.js.map": "/Life-on-Wheels/static/js/main.c7acf7b6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7acaea2f.css",
+    "static/js/main.c7acf7b6.js"
+  ]
+}
