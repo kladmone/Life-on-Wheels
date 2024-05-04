@@ -7,16 +7,12 @@ const Navigation = () => {
         <NavLink to="/" className={css.navBtn}>
           Home
         </NavLink>
-        <>
-          <NavLink to="/catalog" className={css.navBtn}>
-            Catalog
-          </NavLink>
-        </>
-        <>
-          <NavLink to="/favorite" className={css.navBtn}>
-            Favorite
-          </NavLink>
-        </>
+        <NavLink to="/catalog" className={css.navBtn}>
+          Catalog
+        </NavLink>
+        <NavLink to="/favorite" className={css.navBtn}>
+          Favorite
+        </NavLink>
       </header>
     </div>
   );

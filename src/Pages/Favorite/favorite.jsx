@@ -1,7 +1,7 @@
 import css from './favorite.module.css';
 
-const favorite = () => {
+const Favorite = () => {
   return <div className={css.favoriteBox}></div>;
 };
 
-export default favorite;
+export default Favorite;

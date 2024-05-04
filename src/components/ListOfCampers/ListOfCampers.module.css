@@ -1,0 +1,44 @@
+.listCapmers {
+  list-style: none;
+  padding: 0 64px;
+}
+.capmresContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+.camperPhoto {
+  width: 310px;
+  height: 290px;
+  border-radius: 10px;
+}
+.camperItem {
+  display: flex;
+  width: 888px;
+  height: 358px;
+  border: 1 solid rgba(16, 24, 40, 0.2);
+}
+.camperDescription {
+  display: flex;
+}
+.favoriteBtn {
+  padding: 0;
+}
+.showMoreBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 200px;
+  width: 166px;
+  height: 56px;
+  border-style: none;
+  background-color: #e44848;
+  font-weight: 500;
+  font-size: 16px;
+  color: #fff;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.showMoreBtn:hover,
+.showMoreBtn:focus {
+  background-color: #d84343;
+}

@@ -5,7 +5,7 @@ const homePage = () => {
       <div className={css.titleBox}>
         <h1 className={css.homeTitle}>Life on Wheels</h1>
       </div>
-      <div>
+      <div className={css.descriptionContainer}>
         <h2 className={css.subtitle}>Service Description:</h2>
         <p className={css.compDescription}>
           "Life on Wheels" is a company specializing in the sale and servicing
