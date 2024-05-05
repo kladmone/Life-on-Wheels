@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Life-on-Wheels/static/css/main.7bed53ec.css",
-    "main.js": "/Life-on-Wheels/static/js/main.48ebc1db.js",
+    "main.css": "/Life-on-Wheels/static/css/main.d53fae8d.css",
+    "main.js": "/Life-on-Wheels/static/js/main.d8dc6e42.js",
     "static/media/Sprite.svg": "/Life-on-Wheels/static/media/Sprite.d06019da41c06566a15165077c68365c.svg",
     "index.html": "/Life-on-Wheels/index.html",
-    "main.7bed53ec.css.map": "/Life-on-Wheels/static/css/main.7bed53ec.css.map",
-    "main.48ebc1db.js.map": "/Life-on-Wheels/static/js/main.48ebc1db.js.map"
+    "main.d53fae8d.css.map": "/Life-on-Wheels/static/css/main.d53fae8d.css.map",
+    "main.d8dc6e42.js.map": "/Life-on-Wheels/static/js/main.d8dc6e42.js.map"
   },
   "entrypoints": [
-    "static/css/main.7bed53ec.css",
-    "static/js/main.48ebc1db.js"
+    "static/css/main.d53fae8d.css",
+    "static/js/main.d8dc6e42.js"
   ]
 }
