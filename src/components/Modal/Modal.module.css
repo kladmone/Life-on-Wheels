@@ -1,26 +1,128 @@
 .overlay {
   position: fixed;
-  left: 0;
-  right: 0;
   top: 0;
-  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
   background-color: rgba(0, 0, 0, 0.2);
 }
 .modal {
+  display: flex;
   border-radius: 20px;
   padding: 40px;
-  background-color: white;
-  width: 928px;
-
-  height: 720px;
+  width: 982px;
+  height: 620px;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #fff;
+  overflow-y: scroll;
+  overflow-x: hidden;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 902px;
+}
+.modalHead {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.name {
+  margin: 0;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 125%;
+  color: #101828;
+}
 .modalCloseBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 40px;
+  right: 40px;
   cursor: pointer;
+}
+.modalCloseIcon {
+  width: 32px;
+  height: 32px;
+}
+.infoBox {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+}
+.reviewLocation {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  justify-content: flex-start;
+  align-items: center;
+  line-height: 1.5;
+  text-decoration-skip-ink: none;
+  width: 100%;
+}
+.reviewWrap {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  align-items: center;
+}
+.review {
+  margin: 0;
+}
+.location {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  align-items: center;
+}
+.location {
+  margin: 0;
+}
+.price {
+  margin: 0;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.25;
+}
+.imageList {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 0;
+  width: 902px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+.image {
+  border-radius: 10px;
+  width: 290px;
+  height: 310px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.description {
+  color: #475467;
+  margin: 0;
+  width: 900px;
 }

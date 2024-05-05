@@ -16,7 +16,7 @@ const camperSlice = createSlice({
   name: 'campers',
   initialState: Campers,
   reducers: {
-    setpagination(state, action) {
+    setPagination(state, action) {
       state.pagination = action.payload;
     },
     setVehicleType(state, action) {
