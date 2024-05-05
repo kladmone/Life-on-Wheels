@@ -1,24 +1,42 @@
 import css from './ListOfCampers.module.css';
 import {
+  IoBedOutline,
+  IoLocationOutline,
+  IoPeopleOutline,
+} from 'react-icons/io5';
+
+import {
   selectVehicleType,
   selectCampers,
   selectFilters,
   selectLocation,
   selectPagination,
 } from '../../Redux/selectors.js';
+
+import { FaStar, FaRegHeart, FaGasPump, FaHeart } from 'react-icons/fa';
 import { useDispatch, useSelector } from 'react-redux';
-import {
-  IoBedOutline,
-  IoLocationOutline,
-  IoPeopleOutline,
-} from 'react-icons/io5';
-import { FaStar, FaRegHeart, FaGasPump } from 'react-icons/fa';
 import { useEffect, useState } from 'react';
 import { getCampers } from 'Services/api';
-import Modal from 'components/Modal/Modal';
 import LoadMoreBtn from 'components/LoadMoreBtn/LoadMoreBtn';
+import Modal from 'components/Modal/Modal';
+
 const ListOfCampers = () => {
+  const campers = useSelector(selectCampers);
+  const pagination = useSelector(selectPagination);
+  const location = useSelector(selectLocation);
+  const equipmentFilters = useSelector(selectFilters);
+  const vehicleType = useSelector(selectVehicleType);
+  const dispatch = useDispatch();
+
   const [isOpenModal, setIsOpenModal] = useState(false);
+  const [isFavorite, setIsFavorite] = useState(() => {
+    const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+
+    const isCamperInFavorite = favorites.some(
+      favoriteCamper => favoriteCamper._id === campers._id
+    );
+    return isCamperInFavorite;
+  });
 
   const openModal = () => {
     setIsOpenModal(true);
@@ -28,12 +46,33 @@ const ListOfCampers = () => {
     setIsOpenModal(false);
   };
 
-  const campers = useSelector(selectCampers);
-  const pagination = useSelector(selectPagination);
-  const location = useSelector(selectLocation);
-  const equipmentFilters = useSelector(selectFilters);
-  const vehicleType = useSelector(selectVehicleType);
-  const dispatch = useDispatch();
+  const [id] = useState(campers._id);
+
+  const toggleFavorite = () => {
+    setIsFavorite(!isFavorite);
+  };
+
+  useEffect(() => {
+    const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    const isCamperAlreadyInFavorite = favorites.some(
+      favoriteCamper => favoriteCamper._id === id
+    );
+
+    if (!isCamperAlreadyInFavorite) {
+      const updatedFavorites = isFavorite
+        ? [...favorites, campers]
+        : favorites.filter(favoriteCamper => favoriteCamper._id !== id);
+
+      localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
+    } else {
+      if (!isFavorite) {
+        const updatedFavorites = favorites.filter(
+          favoriteCamper => favoriteCamper._id !== id
+        );
+        localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
+      }
+    }
+  }, [isFavorite, id, campers]);
 
   useEffect(() => {
     dispatch(getCampers({ location, equipmentFilters, vehicleType }));
@@ -57,8 +96,18 @@ const ListOfCampers = () => {
                   </h3>
                   <div className={css.priceWrapper}>
                     <p className={css.price}>{campers.price}</p>
-                    <button type="button" className={css.notFavoriteBtn}>
-                      <FaRegHeart />
+                    <button
+                      type="button"
+                      className={
+                        isFavorite ? css.favoriteBtn : css.notFavoriteBtn
+                      }
+                      onClick={toggleFavorite}
+                    >
+                      {isFavorite ? (
+                        <FaHeart className={css.favorite} />
+                      ) : (
+                        <FaRegHeart className={css.notFavorite} />
+                      )}
                     </button>
                   </div>
                 </div>

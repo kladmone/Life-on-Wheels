@@ -2,7 +2,7 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 import Home from './Pages/homePage/homePage.jsx';
 import Navigation from 'components/Navigation/Navigation.jsx';
 import Catalog from 'Pages/Catalog/Catalog.jsx';
-import Favorite from 'Pages/Favorite/Favorite.jsx';
+import Favorite from 'Pages/Favorites/Favorites.jsx';
 export const App = () => {
   return (
     <div>
