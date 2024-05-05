@@ -47,7 +47,7 @@ const Modal = ({ isOpen, onClose, campers }) => {
               </div>
               <div className={css.location}>
                 <IoLocationOutline />
-                <p className={css.locationP}>{location}</p>
+                <p className={css.locationText}>{location}</p>
               </div>
             </div>
             <p className={css.price}>€{price}</p>

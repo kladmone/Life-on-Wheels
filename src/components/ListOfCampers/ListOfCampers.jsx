@@ -6,6 +6,13 @@ import {
 } from 'react-icons/io5';
 
 import {
+  TbAutomaticGearbox,
+  TbGasStation,
+  TbToolsKitchen2,
+  TbAirConditioning,
+} from 'react-icons/tb';
+
+import {
   selectVehicleType,
   selectCampers,
   selectFilters,
@@ -13,7 +20,7 @@ import {
   selectPagination,
 } from '../../Redux/selectors.js';
 
-import { FaStar, FaRegHeart, FaGasPump, FaHeart } from 'react-icons/fa';
+import { FaStar, FaRegHeart, FaHeart } from 'react-icons/fa';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
 import { getCampers } from 'Services/api';
@@ -95,7 +102,7 @@ const ListOfCampers = () => {
                     {campers.name.slice(0, 23)}
                   </h3>
                   <div className={css.priceWrapper}>
-                    <p className={css.price}>{campers.price}</p>
+                    <p className={css.price}>€{campers.price}</p>
                     <button
                       type="button"
                       className={
@@ -135,17 +142,17 @@ const ListOfCampers = () => {
                   </p>
                 </li>
                 <li className={css.optionItem}>
-                  <IoPeopleOutline className={css.optionIcon} />
+                  <TbAutomaticGearbox className={css.optionIcon} />
                   <p className={css.optionDescription}>
                     {campers.transmission}
                   </p>
                 </li>
                 <li className={css.optionItem}>
-                  <FaGasPump className={css.optionIcon} />
+                  <TbGasStation className={css.optionIcon} />
                   <p className={css.optionDescription}>{campers.engine}</p>
                 </li>
                 <li className={css.optionItem}>
-                  <IoPeopleOutline className={css.optionIcon} />
+                  <TbToolsKitchen2 className={css.optionIcon} />
                   <p className={css.optionDescription}>kitchen</p>
                 </li>
                 <li className={css.optionItem}>
@@ -155,7 +162,7 @@ const ListOfCampers = () => {
                   </p>
                 </li>
                 <li className={css.optionItem}>
-                  <IoPeopleOutline className={css.optionIcon} />
+                  <TbAirConditioning className={css.optionIcon} />
                   <p className={css.optionDescription}>AC</p>
                 </li>
               </ul>

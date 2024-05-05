@@ -6,12 +6,6 @@ const FormFilters = () => {
     <aside className={css.sidebar}>
       <form name="filters">
         <p className={css.location}>Location</p>
-        {/* <svg width="18" height="20">
-          <use
-            className={css.mapPinSvg}
-            xlinkHref={`${sprite}#icon-map-pin`}
-          ></use>
-        </svg> */}
         <input type="text" placeholder="City" className={css.locationInput} />
         <p className={css.filters}>Filters</p>
         <p className={css.equipment}>Vehicle equipment</p>

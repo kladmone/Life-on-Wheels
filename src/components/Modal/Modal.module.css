@@ -39,7 +39,7 @@
   align-items: center;
   margin-bottom: 10px;
 }
-.name {
+.camperName {
   margin: 0;
   font-weight: 700;
   font-size: 24px;
@@ -93,7 +93,7 @@
   gap: 4px;
   align-items: center;
 }
-.location {
+.locationText {
   margin: 0;
 }
 .price {
@@ -125,4 +125,20 @@
   color: #475467;
   margin: 0;
   width: 900px;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  overflow-y: hidden;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d9d9d9;
+  border-radius: 7px;
+  height: 264px;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  overflow-y: hidden;
 }
