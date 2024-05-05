@@ -9,6 +9,7 @@ const Modal = ({ isOpen, onClose, campers }) => {
       onClose();
     }
   };
+
   useEffect(() => {
     const onKeyDown = e => {
       if (e.key === 'Escape') onClose();

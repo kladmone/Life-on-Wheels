@@ -35,6 +35,8 @@ const ListOfCampers = () => {
   const vehicleType = useSelector(selectVehicleType);
   const dispatch = useDispatch();
 
+  const [id] = useState(campers._id);
+
   const [isOpenModal, setIsOpenModal] = useState(false);
   const [isFavorite, setIsFavorite] = useState(() => {
     const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
@@ -52,8 +54,6 @@ const ListOfCampers = () => {
   const closeModal = () => {
     setIsOpenModal(false);
   };
-
-  const [id] = useState(campers._id);
 
   const toggleFavorite = () => {
     setIsFavorite(!isFavorite);

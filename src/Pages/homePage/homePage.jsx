@@ -1,7 +1,7 @@
 import css from './homePage.module.css';
 const homePage = () => {
   return (
-    <div>
+    <div className={css.homeContainer}>
       <div className={css.titleBox}>
         <h1 className={css.homeTitle}>Life on Wheels</h1>
       </div>
